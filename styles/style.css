@@ -298,6 +298,7 @@ footer {
 	bottom: 0;
 }
 
+
 /*--------------------------------------------attraction.html*/
 .attraction-page .card-container {
     display: flex;
@@ -1074,7 +1075,6 @@ footer {
 
 
 
- 
 
 
 
@@ -1091,41 +1091,271 @@ footer {
 
 
 
+/*responsiveness section*/
 
+@media (max-width: 900px) {
+    .head {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        left: 20px;
+        right: 20px;
+    }
 
+    .head img {
+        height: 12vh;
+    }
 
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+        margin-left: 0;
+    }
 
+    .hero {
+        justify-content: center;
+        text-align: center;
+        height: 80vh;
+    }
 
+    .hero-text {
+        position: static;
+        text-align: center;
+        margin: 0 20px;
+    }
 
+    .hero-text h2 {
+        font-size: 36px;
+        text-align: center;
+    }
 
+    .hero-text p {
+        font-size: 18px;
+    }
 
+    h2 {
+        font-size: 32px;
+    }
 
+    h3 {
+        font-size: 16px;
+    }
 
+    .ending-note {
+        font-size: 18px;
+        margin: 40px 20px;
+    }
 
+    footer {
+        height: auto;
+        padding: 20px 0;
+    }
 
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
+@media (max-width: 900px) {
+    nav ul {
+        flex-direction: row;      
+        flex-wrap: wrap;        
+        justify-content: center;
+        gap: 10px;
+        padding-top: 10px;
+        margin-left: 0;
+    }
 
+    nav ul li a {
+        font-size: 14px; /* shrink a bit */
+    }
+}
 
+@media (max-width: 1000px) {
+    .index-page .card-container {
+        width: calc(100% - 40px);
+        columns: 2; /* reduce from 3 */
+    }
+}
 
+@media (max-width: 600px) {
+    .index-page .card-container {
+        columns: 1; /* stack everything */
+    }
 
+    .index-page .divider {
+        font-size: 22px;
+        margin: 30px 20px;
+    }
 
-
-
-@media (max-width: 1200px) {
-	.index-page .card-container {
-		width: calc(100% - 40px);
-		columns: 3;
-	}
+    .index-page .description h2 {
+        font-size: 18px;
+    }
 }
 
 
-@media (max-width: 800px) {
-  .card, .card.reverse {
-    flex-direction: column;
-    height: auto;
-  }
-  .card-image {
-    width: 100%;
-    height: 250px;
-  }
+/* Attraction page - responsive tweaks */
+@media (max-width: 1000px) {
+    /* make cards stack vertically instead of row/row-reverse */
+    .attraction-page .card,
+    .attraction-page .card.reverse {
+        flex-direction: column;
+        height: auto;           /* let content define height */
+    }
+
+    /* card image height smaller */
+    .attraction-page .card-image {
+        height: 300px;
+    }
+
+    /* description text smaller */
+    .attraction-page .card .short-description {
+        padding: 20px;
+        text-align: center;     /* center for small screens */
+    }
+
+    /* headings smaller */
+    .attraction-page .card h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    /* paragraphs smaller */
+    .attraction-page .card-container p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* further adjust for mobile */
+    .attraction-page .card-image {
+        height: 200px;
+    }
+
+    .attraction-page .card h2 {
+        font-size: 22px;
+    }
+
+    .attraction-page .card .short-description {
+        padding: 15px;
+    }
+}
+
+
+/* Festival page - responsive tweaks */
+@media (max-width: 1000px) {
+    /* Stack cards vertically */
+    .festival-page .card,
+    .festival-page .card.reverse {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Reduce card image height */
+    .festival-page .card-image {
+        width: 100%;
+        height: 350px;
+    }
+
+    /* Short description tweaks */
+    .festival-page .card .short-description {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Headings smaller */
+    .festival-page .card h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    /* Paragraphs smaller */
+    .festival-page .card-container p {
+        font-size: 16px;
+    }
+
+    /* Hero text adjustments */
+    .festival-li-page .hero-text h2 {
+        font-size: 40px;
+        margin-top: 200px;
+    }
+
+    .festival-li-page .page-hero {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile stack */
+    .festival-page .card-image {
+        height: 250px;
+    }
+
+    .festival-page .card h3 {
+        font-size: 22px;
+    }
+
+    .festival-page .card .short-description {
+        padding: 15px;
+    }
+
+    .festival-li-page .hero-text h2 {
+        font-size: 28px;
+        margin-top: 100px;
+    }
+
+    .festival-li-page .place-description {
+        padding: 20px;
+    }
+
+    .festival-li-page .place-description h2 {
+        font-size: 24px;
+    }
+
+    .festival-li-page .place-description p {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .isabela-page-main .card-container {
+        width: calc(100% - 40px);  
+        columns: 2;                /* reduce columns */
+    }
+
+    .isabela-page-main .container {
+        margin: 15px 50px;         /* reduce side margin */
+        padding: 20px;
+    }
+
+    .isabela h3 {
+        font-size: 24px;
+    }
+
+    .isabela p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .isabela-page-main .card-container {
+        columns: 1;                /* stack cards vertically */
+        width: 100%;
+    }
+
+    .isabela-page-main .container {
+        margin: 15px 20px;
+        padding: 15px;
+    }
+
+    .isabela h3 {
+        font-size: 20px;
+    }
+
+    .isabela p {
+        font-size: 14px;
+    }
 }
